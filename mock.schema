@@ -1,0 +1,23 @@
+    {
+       "api": [
+            { "url": "http://target/api", "dataset": "set_name" },
+            { "url": "http://target/api2", "dataset": "set_name2" }
+       ],
+       "randoms": {
+            "random_set1": ["value1", "value2", "value3"],
+            "random_set2": [1,2,3,4,5,6],
+            "random_set3": $set_name.target_field
+       },
+       "schema": {
+            "table_name": {
+                "field_name": "static value",
+                "field_name1": 1234,
+                "field_name2": $set_name.field,
+                "field_name3": $set_name2.field,
+                "field_name4": $set_name2.field2,
+                "rand_field1": $random_set1,
+                "rand_field2": $random_set2,
+                "rand_field3": $random_set3
+            }
+        }
+    }
